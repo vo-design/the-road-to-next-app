@@ -1,9 +1,10 @@
 import "./globals.css";
 
-import Link from "next/link";
 import type { Metadata } from "next";
-import {homePath, ticketPaths} from "@/paths";
 import localFont from "next/font/local";
+import Link from "next/link";
+
+import {homePath, ticketPaths} from "@/paths";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
