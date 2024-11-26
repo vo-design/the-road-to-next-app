@@ -13,6 +13,15 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    keyframes: {
+      "fade-in-from-top": {
+        from: {opacity: "0", transform: "translateY(-20px)"},
+        to: {opacity: "1", transform: "translateY(0)"},
+      }
+    },
+    animation: {
+      "fade-in-from-top": "fade-in-from-top 0.5s ease-out",
+    }
   },
   plugins: [],
 } satisfies Config;
