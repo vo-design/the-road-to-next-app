@@ -1,13 +1,12 @@
 import "./globals.css";
 
+import {Tickets} from "lucide-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
 
-import {homePath, ticketPaths} from "@/paths";
-
 import { buttonVariants } from "@/components/ui/button"
-import {Tickets} from "lucide-react";
+import {homePath, ticketPaths} from "@/paths";
 
 
 const geistSans = localFont({

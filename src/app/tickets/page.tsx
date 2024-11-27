@@ -1,8 +1,6 @@
-import clsx from "clsx";
+import {CircleCheck, FolderOpen, LoaderCircle} from "lucide-react";
 import Link from "next/link";
 
-import {initialTickets} from "@/data";
-import {ticketPath} from "@/paths";
 import {
     Card,
     CardContent,
@@ -11,7 +9,8 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import {CircleCheck, FolderOpen, LoaderCircle} from "lucide-react";
+import {initialTickets} from "@/data";
+import {ticketPath} from "@/paths";
 
 const TICKET_ICONS = {
     OPEN: <FolderOpen />,
