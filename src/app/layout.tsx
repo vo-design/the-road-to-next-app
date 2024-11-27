@@ -51,7 +51,7 @@ export default function RootLayout({
             </Link>
         </div>
         <div>
-            <Link href={ticketPaths()} className={buttonVariants({variant: "outline"})}>Tickets</Link>
+            <Link href={ticketPaths()} className={buttonVariants({variant: "default"})}>Tickets</Link>
         </div>
       </nav>
       <main className="
