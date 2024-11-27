@@ -7,6 +7,7 @@ import Link from "next/link";
 import {homePath, ticketPaths} from "@/paths";
 
 import { buttonVariants } from "@/components/ui/button"
+import {Tickets} from "lucide-react";
 
 
 const geistSans = localFont({
@@ -42,10 +43,15 @@ export default function RootLayout({
             w-full flex py-2.5 px-5 justify-between
             ">
         <div>
-            <Link href={homePath()} className={buttonVariants({variant: "outline"})}>Home</Link>
+            <Link href={homePath()} className={buttonVariants({variant: "ghost"})}>
+                <Tickets />
+                <h1 className="ml-1 text-lg font-semibold">
+                    TicketBounty
+                </h1>
+            </Link>
         </div>
         <div>
-            <Link href={ticketPaths()} className={buttonVariants({variant: "ghost"})}>Tickets</Link>
+            <Link href={ticketPaths()} className={buttonVariants({variant: "outline"})}>Tickets</Link>
         </div>
       </nav>
       <main className="
