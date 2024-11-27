@@ -6,6 +6,9 @@ import Link from "next/link";
 
 import {homePath, ticketPaths} from "@/paths";
 
+import { buttonVariants } from "@/components/ui/button"
+
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -39,10 +42,10 @@ export default function RootLayout({
             w-full flex py-2.5 px-5 justify-between
             ">
         <div>
-          <Link href={homePath()} className="text-lg font-bold">Home</Link>
+            <Link href={homePath()} className={buttonVariants({variant: "outline"})}>Home</Link>
         </div>
         <div>
-          <Link href={ticketPaths()} className="text-sm underline">Tickets</Link>
+            <Link href={ticketPaths()} className={buttonVariants({variant: "ghost"})}>Tickets</Link>
         </div>
       </nav>
       <main className="
