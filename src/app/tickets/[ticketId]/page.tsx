@@ -22,9 +22,7 @@ const TicketPage = async ({ params }: TicketPageProps) => {
     return <div>Unable to load ticket. Please try again later.</div>;
   }
 
-  const ticket = initialTickets.find(
-    (ticket) => String(ticket.id) === ticketId,
-  );
+  const ticket = initialTickets.find((ticket) => ticket.id === ticketId);
 
   if (!ticket) {
     return (
