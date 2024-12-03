@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Placeholder } from "@/components/Placeholder";
 import { Button } from "@/components/ui/button";
 import { initialTickets } from "@/data";
-import { ticketPaths } from "@/paths";
 import { TicketItem } from "@/features/ticket/components/ticket-item";
+import { ticketPaths } from "@/paths";
 
 type TicketPageProps = {
   params: Promise<{
