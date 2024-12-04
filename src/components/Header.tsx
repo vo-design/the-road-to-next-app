@@ -1,6 +1,7 @@
 import { Tickets } from "lucide-react";
 import Link from "next/link";
 
+import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 import { buttonVariants } from "@/components/ui/button";
 import { homePath, ticketPaths } from "@/paths";
 
@@ -23,7 +24,8 @@ const Header = () => {
           <h1 className="ml-1 text-lg font-semibold">TicketBounty</h1>
         </Link>
       </div>
-      <div>
+      <div className="flex align-items gap-x-2">
+        <ThemeSwitcher />
         <Link
           href={ticketPaths()}
           className={buttonVariants({ variant: "default" })}
