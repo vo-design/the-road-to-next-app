@@ -4,6 +4,7 @@ import {Suspense} from "react";
 
 import { Heading } from "@/components/heading";
 import {TicketList} from "@/features/ticket/components/ticket-list";
+import {Spinner} from "@/components/spinner";
 
 const TicketsPage = () => {
 
@@ -14,7 +15,7 @@ const TicketsPage = () => {
         title="Tickets Page"
         description="All your tickets in one place"
       />
-        <Suspense>
+        <Suspense fallback={<Spinner />}>
             <TicketList />
         </Suspense>
 
