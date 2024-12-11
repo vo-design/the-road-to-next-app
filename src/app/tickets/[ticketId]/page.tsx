@@ -14,7 +14,8 @@ type TicketPageProps = {
 
 const TicketPage = async ({ params }: TicketPageProps) => {
 
-  const ticket = await getTicket(params.ticketId);
+    const resolvedParams = await params; // Await the promise to resolve the params
+    const ticket = await getTicket(resolvedParams.ticketId);
 
   if (!ticket) {
     return (
