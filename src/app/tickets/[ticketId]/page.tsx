@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Placeholder } from "@/components/Placeholder";
 import { Button } from "@/components/ui/button";
-import { initialTickets } from "@/data";
+import {getTicket} from "@/features/queries/get-ticket";
 import { TicketItem } from "@/features/ticket/components/ticket-item";
 import { ticketPaths } from "@/paths";
 
@@ -13,17 +13,8 @@ type TicketPageProps = {
 };
 
 const TicketPage = async ({ params }: TicketPageProps) => {
-  let ticketId: string;
 
-  try {
-    const { ticketId: id } = await params;
-    ticketId = id; // For additional use if needed
-  } catch (error) {
-    console.error("Error fetching ticket ID:", error);
-    return <div>Unable to load ticket. Please try again later.</div>;
-  }
-
-  const ticket = initialTickets.find((ticket) => ticket.id === ticketId);
+  const ticket = await getTicket(params.ticketId);
 
   if (!ticket) {
     return (
