@@ -5,6 +5,8 @@ import {Suspense} from "react";
 import { Heading } from "@/components/heading";
 import {Spinner} from "@/components/spinner";
 import {TicketList} from "@/features/ticket/components/ticket-list";
+import {ErrorBoundary} from "react-error-boundary";
+import {Placeholder} from "@/components/Placeholder";
 
 const TicketsPage = () => {
 
@@ -15,9 +17,12 @@ const TicketsPage = () => {
         title="Tickets Page"
         description="All your tickets in one place"
       />
-        <Suspense fallback={<Spinner />}>
-            <TicketList />
-        </Suspense>
+        <ErrorBoundary fallback={<Placeholder label="Something went wrong!"/>}>
+            <Suspense fallback={<Spinner />}>
+                <TicketList />
+            </Suspense>
+        </ErrorBoundary>
+
 
     </div>
   );
