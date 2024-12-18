@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
+
 import tailwindcss_animate from "tailwindcss-animate";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -53,27 +54,22 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
+      keyframes: {
+        "fade-from-top": {
+          from: { opacity: "0", transform: "translateY(-16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-from-top": "fade-from-top 0.5s ease-out",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
     },
-    keyframes: {
-      "fade-in-from-top": {
-        from: {
-          opacity: "0",
-          transform: "translateY(-20px)",
-        },
-        to: {
-          opacity: "1",
-          transform: "translateY(0)",
-        },
-      },
-    },
-    animation: {
-      "fade-in-from-top": "fade-in-from-top 0.5s ease-out",
-    },
   },
   plugins: [tailwindcss_animate],
-} satisfies Config;
+};
+export default config;
