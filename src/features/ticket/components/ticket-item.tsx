@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TICKET_ICONS } from "@/features/ticket/constants";
-import { Ticket } from "@/features/ticket/types";
 import { ticketPath } from "@/paths";
+import {Ticket} from "@prisma/client";
 
 type TicketItemProps = {
   ticket: Ticket;
