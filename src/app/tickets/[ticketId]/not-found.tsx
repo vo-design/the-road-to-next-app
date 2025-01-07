@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import {Placeholder} from "@/components/Placeholder";
 import {Button} from "@/components/ui/button";
-import {ticketPaths} from "@/paths";
+import {ticketsPath} from "@/paths";
 
 export default function NotFound() {
     return (
@@ -10,7 +10,7 @@ export default function NotFound() {
             label="Ticket not found"
             button={
                 <Button asChild variant="outline">
-                    <Link href={ticketPaths()}>Go to tickets</Link>
+                    <Link href={ticketsPath()}>Go to tickets</Link>
                 </Button>
             }
         />
