@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 import { buttonVariants } from "@/components/ui/button";
-import { homePath, ticketPaths } from "@/paths";
+import { homePath, ticketsPath } from "@/paths";
 
 const Header = () => {
   return (
@@ -27,7 +27,7 @@ const Header = () => {
       <div className="flex align-items gap-x-2">
         <ThemeSwitcher />
         <Link
-          href={ticketPaths()}
+          href={ticketsPath()}
           className={buttonVariants({ variant: "default" })}
         >
           Tickets
