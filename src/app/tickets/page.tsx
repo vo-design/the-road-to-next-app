@@ -1,12 +1,12 @@
 import {Suspense} from "react";
 import {ErrorBoundary} from "react-error-boundary";
 
+import {CardCompact} from "@/components/card-compact";
 import {Heading} from "@/components/heading";
 import {Placeholder} from "@/components/Placeholder";
 import {Spinner} from "@/components/spinner";
 import {TicketCreateForm} from "@/features/ticket/components/ticket-create-form";
 import {TicketList} from "@/features/ticket/components/ticket-list";
-import {CardCompact} from "@/components/card-compact";
 
 
 const TicketsPage = () => {
