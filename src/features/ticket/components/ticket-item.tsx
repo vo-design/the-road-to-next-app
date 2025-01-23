@@ -7,9 +7,9 @@ import {ConfirmDialog} from "@/components/confirm-dialog";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {deleteTicket} from "@/features/ticket/actions/delete-ticket";
+import {TicketMoreMenu} from "@/features/ticket/components/ticket-more-menu";
 import {TICKET_ICONS} from "@/features/ticket/constants";
 import {ticketEditPath, ticketPath} from "@/paths";
-import {TicketMoreMenu} from "@/features/ticket/components/ticket-more-menu";
 import {toCurrencyFromCent} from "@/utils/currency";
 
 type TicketItemProps = {
