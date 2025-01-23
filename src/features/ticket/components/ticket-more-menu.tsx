@@ -1,10 +1,10 @@
 "use client";
 
 import {Ticket, TicketStatus} from "@prisma/client";
-import { Trash } from "lucide-react";
+import {Trash} from "lucide-react";
 import {toast} from "sonner";
 
-import { useConfirmDialog } from "@/components/confirm-dialog";
+import {useConfirmDialog} from "@/components/confirm-dialog";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -15,7 +15,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { deleteTicket } from "../actions/delete-ticket";
+import {deleteTicket} from "../actions/delete-ticket";
 import {updateTicketStatus} from "../actions/update-ticket-status";
 import {TICKET_STATUS_LABELS} from "../constants";
 
