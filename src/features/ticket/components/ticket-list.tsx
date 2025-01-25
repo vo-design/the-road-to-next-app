@@ -1,4 +1,4 @@
-import {getTickets} from "@/features/queries/get-tickets";
+import {getTickets} from "@/features/ticket/queries/get-tickets";
 import {TicketItem} from "@/features/ticket/components/ticket-item";
 
 const TicketList = async () => {

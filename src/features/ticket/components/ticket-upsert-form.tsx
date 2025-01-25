@@ -4,7 +4,7 @@ import {Ticket} from "@prisma/client";
 import {useActionState, useRef} from "react";
 
 import {DatePicker, ImperativeHandleFromDatePicker,} from "@/components/data-picker";
-import {FieldError} from "@/components/form/fiels-error";
+import {FieldError} from "@/components/form/field-error";
 import {Form} from "@/components/form/form";
 import {SubmitButton} from "@/components/form/submit-button";
 import {EMPTY_ACTION_STATE} from "@/components/form/utils/to-action-state";
