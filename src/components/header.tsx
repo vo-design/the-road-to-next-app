@@ -1,9 +1,10 @@
-import {Tickets} from "lucide-react";
+import {LucideLogOut, Tickets} from "lucide-react";
 import Link from "next/link";
-
-import {ThemeSwitcher} from "@/components/theme/theme-switcher";
-import {buttonVariants} from "@/components/ui/button";
+import {signOut} from "@/features/auth/actions/sign-out";
 import {homePath, signInPath, signUpPath, ticketsPath} from "@/paths";
+import {SubmitButton} from "./form/submit-button";
+import {ThemeSwitcher} from "./theme/theme-switcher";
+import {buttonVariants} from "./ui/button";
 
 const Header = () => {
     const navItems = (
@@ -26,6 +27,9 @@ const Header = () => {
             >
                 Sign In
             </Link>
+            <form action={signOut}>
+                <SubmitButton label="Sign Out" icon={<LucideLogOut/>}/>
+            </form>
         </>
     );
 

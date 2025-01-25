@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import {Heading} from "@/components/heading";
 import {ticketsPath} from "@/paths";
 

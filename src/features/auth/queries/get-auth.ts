@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 import { cache } from "react";
-
 import { lucia } from "@/lib/lucia";
 
 export const getAuth = cache(async () => {

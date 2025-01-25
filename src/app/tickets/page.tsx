@@ -1,6 +1,5 @@
 import {Suspense} from "react";
 import {ErrorBoundary} from "react-error-boundary";
-
 import {CardCompact} from "@/components/card-compact";
 import {Heading} from "@/components/heading";
 import {Placeholder} from "@/components/placeholder";

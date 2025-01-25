@@ -2,7 +2,6 @@
 
 import { LucideMoon, LucideSun } from "lucide-react";
 import { useTheme } from "next-themes";
-
 import { Button } from "@/components/ui/button";
 
 const ThemeSwitcher = () => {
