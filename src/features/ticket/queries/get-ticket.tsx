@@ -1,9 +1,14 @@
 import {prisma} from "@/lib/prisma";
 
-export const getTicket = async (id: string) => {
-    return await prisma.ticket.findUnique({
-        where: {
-            id,
+export async function getTicket(ticketId: string) {
+    return prisma.ticket.findUnique({
+        where: {id: ticketId},
+        include: {
+            user: {
+                select: {
+                    username: true, // Ensure the username field is included
+                },
+            },
         },
     });
-};
+}

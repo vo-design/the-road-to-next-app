@@ -1,6 +1,6 @@
-import {notFound} from "next/navigation";
-import {TicketItem} from "@/features/ticket/components/ticket-item";
-import {getTicket} from "@/features/ticket/queries/get-ticket";
+import { notFound } from "next/navigation";
+import { TicketItem } from "@/features/ticket/components/ticket-item";
+import { getTicket } from "@/features/ticket/queries/get-ticket";
 
 type TicketPageProps = {
     params: Promise<{
@@ -8,10 +8,9 @@ type TicketPageProps = {
     }>;
 };
 
-const TicketPage = async ({params}: TicketPageProps) => {
-
-    const resolvedParams = await params; // Await the promise to resolve the params
-    const ticket = await getTicket(resolvedParams.ticketId);
+const TicketPage = async ({ params }: TicketPageProps) => {
+    const { ticketId } = await params;
+    const ticket = await getTicket(ticketId);
 
     if (!ticket) {
         notFound();
@@ -19,7 +18,7 @@ const TicketPage = async ({params}: TicketPageProps) => {
 
     return (
         <div className="flex justify-center animate-fade-from-top">
-            <TicketItem ticket={ticket} isDetail/>
+            <TicketItem ticket={ticket} isDetail />
         </div>
     );
 };

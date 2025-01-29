@@ -1,4 +1,3 @@
-import {Ticket} from "@prisma/client";
 import clsx from "clsx";
 import {ArrowUpRightFromSquare, MoreVertical, Pencil,} from "lucide-react";
 import Link from "next/link";
@@ -7,10 +6,11 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle,} from "@/component
 import {ticketEditPath, ticketPath} from "@/paths";
 import {toCurrencyFromCent} from "@/utils/currency";
 import {TICKET_ICONS} from "../constants";
+import {TicketWithMetadata} from "../types";
 import {TicketMoreMenu} from "./ticket-more-menu";
 
 type TicketItemProps = {
-    ticket: Ticket;
+    ticket: TicketWithMetadata;
     isDetail?: boolean;
 };
 
