@@ -1,11 +1,10 @@
 "use client";
 
-import {LogOut, Tickets} from "lucide-react";
+import {Tickets} from "lucide-react";
 import Link from "next/link";
-import {signOut} from "@/features/auth/actions/sign-out";
+import {AccountDropdown} from "@/components/account-dropdown";
 import {useAuth} from "@/features/auth/hooks/use-auth";
 import {homePath, signInPath, signUpPath} from "@/paths";
-import {SubmitButton} from "./form/submit-button";
 import {ThemeSwitcher} from "./theme/theme-switcher";
 import {buttonVariants} from "./ui/button";
 
@@ -17,9 +16,7 @@ const Header = () => {
     }
 
     const navItems = user ? (
-        <form action={signOut}>
-            <SubmitButton label="Sign Out" icon={<LogOut/>}/>
-        </form>
+        <AccountDropdown user={user}/>
     ) : (
         <>
             <Link
