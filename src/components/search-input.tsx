@@ -1,7 +1,6 @@
 "use client";
 
 import {useQueryState} from "nuqs";
-import React from "react";
 import {useDebouncedCallback} from "use-debounce";
 import {searchParser} from "@/features/ticket/search-params";
 import {Input} from "./ui/input";
