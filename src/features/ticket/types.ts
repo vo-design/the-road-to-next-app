@@ -1,4 +1,4 @@
-import { Prisma } from "@prisma/client";
+import {Prisma} from "@prisma/client";
 
 export type TicketWithMetadata = Prisma.TicketGetPayload<{
     include: {
@@ -6,4 +6,4 @@ export type TicketWithMetadata = Prisma.TicketGetPayload<{
             select: { username: true };
         };
     };
-}>;
+}> & { isOwner: boolean };
