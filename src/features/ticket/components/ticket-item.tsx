@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import {LucideArrowUpRightFromSquare, LucideMoreVertical, LucidePencil,} from "lucide-react";
+import {ArrowUpRightFromSquare, MoreVertical, Pencil,} from "lucide-react";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle,} from "@/components/ui/card";
@@ -23,7 +23,7 @@ const TicketItem = ({ticket, isDetail, comments}: TicketItemProps) => {
     const detailButton = (
         <Button variant="outline" size="icon" asChild>
             <Link prefetch href={ticketPath(ticket.id)}>
-                <LucideArrowUpRightFromSquare className="h-4 w-4"/>
+                <ArrowUpRightFromSquare className="h-4 w-4"/>
             </Link>
         </Button>
     );
@@ -31,7 +31,7 @@ const TicketItem = ({ticket, isDetail, comments}: TicketItemProps) => {
     const editButton = ticket.isOwner ? (
         <Button variant="outline" size="icon" asChild>
             <Link prefetch href={ticketEditPath(ticket.id)}>
-                <LucidePencil className="h-4 w-4"/>
+                <Pencil className="h-4 w-4"/>
             </Link>
         </Button>
     ) : null;
@@ -41,7 +41,7 @@ const TicketItem = ({ticket, isDetail, comments}: TicketItemProps) => {
             ticket={ticket}
             trigger={
                 <Button variant="outline" size="icon">
-                    <LucideMoreVertical className="h-4 w-4"/>
+                    <MoreVertical className="h-4 w-4"/>
                 </Button>
             }
         />
