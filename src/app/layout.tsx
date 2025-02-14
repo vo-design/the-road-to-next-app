@@ -1,4 +1,5 @@
 import "./globals.css";
+import {Analytics} from "@vercel/analytics/next";
 import type {Metadata} from "next";
 import localFont from "next/font/local";
 import {NuqsAdapter} from 'nuqs/adapters/next/app';
@@ -53,6 +54,7 @@ export default function RootLayout({
                 <Toaster expand/>
             </ThemeProvider>
         </NuqsAdapter>
+        <Analytics/>
         </body>
         </html>
     );
