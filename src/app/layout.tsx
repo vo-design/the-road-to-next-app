@@ -22,6 +22,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
     title: "The Road to Next",
     description: "My Road to Next application ...",
+    icons: {
+        icon: '/favicon.svg',
+    },
 };
 
 export default function RootLayout({
