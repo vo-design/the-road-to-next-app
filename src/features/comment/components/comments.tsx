@@ -1,28 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { CardCompact } from "@/components/card-compact";
-import { Button } from "@/components/ui/button";
-import { getComments } from "../queries/get-comments";
-import { CommentWithMetadata } from "../types";
-import { CommentCreateForm } from "./comment-create-form";
-import { CommentDeleteButton } from "./comment-delete-button";
-import { CommentItem } from "./comment-item";
+import {useState} from "react";
+import {CardCompact} from "@/components/card-compact";
+import {Button} from "@/components/ui/button";
+import {getComments} from "../queries/get-comments";
+import {CommentWithMetadata} from "../types";
+import {CommentCreateForm} from "./comment-create-form";
+import {CommentDeleteButton} from "./comment-delete-button";
+import {CommentItem} from "./comment-item";
 
 type CommentsProps = {
     ticketId: string;
     paginatedComments: {
         list: CommentWithMetadata[];
-        metadata: { count: number; hasNextPage: boolean };
+        metadata: { count: number; hasNextPage: boolean; cursor?: number };
     };
 };
 
-const Comments = ({ ticketId, paginatedComments }: CommentsProps) => {
+const Comments = ({ticketId, paginatedComments}: CommentsProps) => {
     const [comments, setComments] = useState(paginatedComments.list);
     const [metadata, setMetadata] = useState(paginatedComments.metadata);
 
     const handleMore = async () => {
-        const morePaginatedComments = await getComments(ticketId, comments.length);
+        const morePaginatedComments = await getComments(ticketId, metadata.cursor);
         const moreComments = morePaginatedComments.list;
 
         setComments([...comments, ...moreComments]);
@@ -84,4 +84,4 @@ const Comments = ({ ticketId, paginatedComments }: CommentsProps) => {
     );
 };
 
-export { Comments };
+export {Comments};
