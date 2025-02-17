@@ -1,6 +1,6 @@
 "use client";
 
-import {LucideTrash} from "lucide-react";
+import {LoaderCircle, Trash} from "lucide-react";
 import {useConfirmDialog} from "@/components/confirm-dialog";
 import {Button} from "@/components/ui/button";
 import {deleteComment} from "../actions/delete-comment";
@@ -16,9 +16,13 @@ const CommentDeleteButton = ({
                              }: CommentDeleteButtonProps) => {
     const [deleteButton, deleteDialog] = useConfirmDialog({
         action: deleteComment.bind(null, id),
-        trigger: (
+        trigger: (isPending) => (
             <Button variant="outline" size="icon">
-                <LucideTrash className="w-4 h-4"/>
+                {isPending ? (
+                    <LoaderCircle className="w-4 h-4 animate-spin"/>
+                ) : (
+                    <Trash className="w-4 h-4"/>
+                )}
             </Button>
         ),
         onSuccess: () => onDeleteComment?.(id),
