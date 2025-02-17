@@ -1,6 +1,8 @@
 # 🚀 The Road to Next: Mastering Next.js and Full-Stack Development
 
-Welcome to my learning journey through **full-stack web development with Next.js**! This repository documents my progress in **Robin Wieruch’s** [Road to Next.js](https://www.road-to-next.com/) course, including **my final project**.
+Welcome to my learning journey through **full-stack web development with Next.js**! This repository documents my progress in **Robin Wieruch’s** ([@rwieruch](https://github.com/rwieruch))  [The Road to Next](https://www.road-to-next.com/) course, including **my final project**.
+
+![Cover](./public/the-road-tonext-cover.png)
 
 ## 🛠️ Tech Stack
 
