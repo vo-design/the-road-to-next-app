@@ -1,13 +1,13 @@
 "use client";
 
-import {useState} from "react";
-import {CardCompact} from "@/components/card-compact";
-import {Button} from "@/components/ui/button";
-import {getComments} from "../queries/get-comments";
-import {CommentWithMetadata} from "../types";
-import {CommentCreateForm} from "./comment-create-form";
-import {CommentDeleteButton} from "./comment-delete-button";
-import {CommentItem} from "./comment-item";
+import { useState } from "react";
+import { CardCompact } from "@/components/card-compact";
+import { Button } from "@/components/ui/button";
+import { getComments } from "../queries/get-comments";
+import { CommentWithMetadata } from "../types";
+import { CommentCreateForm } from "./comment-create-form";
+import { CommentDeleteButton } from "./comment-delete-button";
+import { CommentItem } from "./comment-item";
 
 type CommentsProps = {
     ticketId: string;
@@ -17,7 +17,7 @@ type CommentsProps = {
     };
 };
 
-const Comments = ({ticketId, paginatedComments}: CommentsProps) => {
+const Comments = ({ ticketId, paginatedComments }: CommentsProps) => {
     const [comments, setComments] = useState(paginatedComments.list);
     const [metadata, setMetadata] = useState(paginatedComments.metadata);
 
@@ -84,4 +84,4 @@ const Comments = ({ticketId, paginatedComments}: CommentsProps) => {
     );
 };
 
-export {Comments};
+export { Comments };
